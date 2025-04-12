@@ -121,19 +121,16 @@ rf_clf.fit(X_train_resampled, y_train_resampled)
 pred = rf_clf.predict(X_test_scaled)
 ```
 - **Initial accuracy was 100%**, indicating overfitting.
-- **🔎 Feature Importance (Random Forest)**
-| Feature         | Importance |
-|----------------|------------|
-| PARA_A         | 38.8%      |
-| TOTAL          | 25.2%      |
-| PARA_B         | 15.4%      |
-| Money_Value    | 7.6%       |
+- **Feature Importance (Random Forest)**
+PARA_A : 38.8%
+TOTAL : 25.2%
+PARA_B : 15.4%
+Money_Value :7.6%
 
 Interpretation: **Planned errors (PARA_A)** and **total discovered errors** are strong indicators of audit risk.
 
 - Feature importance showed Score-related features were too dominant (>30%), so we dropped them.
 - After fixing, accuracy: **92.7%**
-- 
 
 ### 2️⃣ XGBoost
 ```python
